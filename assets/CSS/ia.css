@@ -1,0 +1,191 @@
+:root {
+            --bg: #07111f;
+            --panel: rgba(255, 255, 255, 0.09);
+            --border: rgba(255, 255, 255, 0.16);
+            --text: #f6f7fb;
+            --muted: #c9d4ec;
+            --accent: #7c5cff;
+            --accent-2: #22c7ff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(34,199,255,0.25), transparent 22%),
+                radial-gradient(circle at bottom right, rgba(124,92,255,0.25), transparent 25%),
+                var(--bg);
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            gap: 22px;
+        }
+
+        .hero, .card {
+            background: var(--panel);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+        }
+
+        .hero {
+            padding: 34px;
+            display: grid;
+            grid-template-columns: 1.5fr 0.8fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            margin: 0 0 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .title {
+            color: #8ce9ff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: grid;
+            place-items: center;
+            font-size: 3.4rem;
+            font-weight: 700;
+            box-shadow: inset 0 0 0 6px rgba(255,255,255,0.16);
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(34,199,255,0.22);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card { padding: 24px; }
+
+        .card h2 {
+            margin: 0 0 12px;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .card p, .card li {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        ul { padding-left: 18px; }
+        li { margin-bottom: 8px; }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .chip {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 0.95rem;
+        }
+
+        .timeline {
+            border-left: 2px solid rgba(255,255,255,0.16);
+            padding-left: 16px;
+            margin-top: 12px;
+        }
+
+        .timeline-item { margin-bottom: 14px; }
+        .timeline-item strong { color: #ffffff; }
+
+        .cert-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .cert-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 16px;
+            padding: 14px;
+        }
+
+        .cert-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.16);
+        }
+
+        @media (max-width: 850px) {
+            .hero { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: 1fr; }
+        }
